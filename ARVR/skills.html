@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Skill Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h2>Skill Manager</h2>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="skills.html">
+                    <i class="fas fa-code"></i>
+                    <span>Skills</span>
+                </a>
+            </li>
+            <li>
+                <a href="projects.html">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="team.html">
+                    <i class="fas fa-users"></i>
+                    <span>Team Builder</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search skills...">
+            </div>
+            <div class="user-profile">
+                <img src="images/avatar.png" alt="User Avatar">
+                <span>John Doe</span>
+            </div>
+        </header>
+
+        <div class="skills-page">
+            <div class="page-header">
+                <h1>Skills Management</h1>
+                <button class="btn-primary" id="addSkillBtn">
+                    <i class="fas fa-plus"></i>
+                    Add New Skill
+                </button>
+            </div>
+
+            <!-- Skill Filters -->
+            <div class="skill-filters">
+                <div class="filter-group">
+                    <label>Level:</label>
+                    <select id="levelFilter">
+                        <option value="all">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Category:</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="frontend">Frontend</option>
+                        <option value="backend">Backend</option>
+                        <option value="database">Database</option>
+                        <option value="devops">DevOps</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="skills-grid">
+                <!-- Skill Card 1 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-title">
+                            <h3>JavaScript</h3>
+                            <span class="skill-level expert">Expert</span>
+                        </div>
+                        <button class="toggle-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="skill-details">
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                            <span>90%</span>
+                        </div>
+                        <p class="skill-description">
+                            Advanced knowledge of modern JavaScript, including ES6+, async programming, and frameworks.
+                        </p>
+                        <div class="skill-meta">
+                            <span><i class="fas fa-certificate"></i> Certified</span>
+                            <span><i class="fas fa-clock"></i> 5 years</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-title">
+                            <h3>React</h3>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <button class="toggle-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="skill-details">
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                            <span>75%</span>
+                        </div>
+                        <p class="skill-description">
+                            Proficient in React development, including hooks, context, and state management.
+                        </p>
+                        <div class="skill-meta">
+                            <span><i class="fas fa-certificate"></i> In Progress</span>
+                            <span><i class="fas fa-clock"></i> 2 years</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-title">
+                            <h3>Node.js</h3>
+                            <span class="skill-level beginner">Beginner</span>
+                        </div>
+                        <button class="toggle-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="skill-details">
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%"></div>
+                            </div>
+                            <span>40%</span>
+                        </div>
+                        <p class="skill-description">
+                            Basic understanding of Node.js, Express, and RESTful API development.
+                        </p>
+                        <div class="skill-meta">
+                            <span><i class="fas fa-certificate"></i> Not Certified</span>
+                            <span><i class="fas fa-clock"></i> 6 months</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Skill Modal -->
+    <div class="modal" id="addSkillModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Skill</h2>
+            <form id="addSkillForm">
+                <div class="form-group">
+                    <label for="skillName">Skill Name</label>
+                    <input type="text" id="skillName" required>
+                </div>
+                <div class="form-group">
+                    <label for="skillLevel">Skill Level</label>
+                    <select id="skillLevel" required>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="skillCategory">Category</label>
+                    <select id="skillCategory" required>
+                        <option value="frontend">Frontend</option>
+                        <option value="backend">Backend</option>
+                        <option value="database">Database</option>
+                        <option value="devops">DevOps</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="skillDescription">Description</label>
+                    <textarea id="skillDescription" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Add Skill</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/skills.js"></script>
+</body>
+</html> 

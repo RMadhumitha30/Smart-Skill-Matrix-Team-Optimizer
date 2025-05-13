@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Skill Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h2>Skill Manager</h2>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="skills.html">
+                    <i class="fas fa-code"></i>
+                    <span>Skills</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="projects.html">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="team.html">
+                    <i class="fas fa-users"></i>
+                    <span>Team Builder</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search projects...">
+            </div>
+            <div class="user-profile">
+                <img src="images/avatar.png" alt="User Avatar">
+                <span>John Doe</span>
+            </div>
+        </header>
+
+        <div class="projects-page">
+            <div class="page-header">
+                <h1>Projects</h1>
+                <button class="btn-primary" id="addProjectBtn">
+                    <i class="fas fa-plus"></i>
+                    New Project
+                </button>
+            </div>
+
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <div class="filter-group">
+                    <label>Complexity:</label>
+                    <select id="complexityFilter">
+                        <option value="all">All Levels</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Status:</label>
+                    <select id="statusFilter">
+                        <option value="all">All Status</option>
+                        <option value="planning">Planning</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Required Skill:</label>
+                    <select id="skillFilter">
+                        <option value="all">All Skills</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="react">React</option>
+                        <option value="node">Node.js</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>E-commerce Platform</h3>
+                        <span class="project-status in-progress">In Progress</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            A full-stack e-commerce platform with React frontend and Node.js backend.
+                        </p>
+                        <div class="project-meta">
+                            <span class="complexity hard">Hard</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 3 months</span>
+                        </div>
+                        <div class="required-skills">
+                            <h4>Required Skills:</h4>
+                            <div class="skill-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <button class="btn-secondary">
+                            <i class="fas fa-users"></i>
+                            Build Team
+                        </button>
+                        <button class="btn-secondary">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Task Management App</h3>
+                        <span class="project-status planning">Planning</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            A simple task management application with drag-and-drop functionality.
+                        </p>
+                        <div class="project-meta">
+                            <span class="complexity medium">Medium</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1 month</span>
+                        </div>
+                        <div class="required-skills">
+                            <h4>Required Skills:</h4>
+                            <div class="skill-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <button class="btn-secondary">
+                            <i class="fas fa-users"></i>
+                            Build Team
+                        </button>
+                        <button class="btn-secondary">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Weather Dashboard</h3>
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            A weather dashboard showing current and forecasted weather data.
+                        </p>
+                        <div class="project-meta">
+                            <span class="complexity easy">Easy</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 2 weeks</span>
+                        </div>
+                        <div class="required-skills">
+                            <h4>Required Skills:</h4>
+                            <div class="skill-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <button class="btn-secondary">
+                            <i class="fas fa-users"></i>
+                            Build Team
+                        </button>
+                        <button class="btn-secondary">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Project Modal -->
+    <div class="modal" id="addProjectModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>New Project</h2>
+            <form id="addProjectForm">
+                <div class="form-group">
+                    <label for="projectName">Project Name</label>
+                    <input type="text" id="projectName" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">Description</label>
+                    <textarea id="projectDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="projectComplexity">Complexity</label>
+                    <select id="projectComplexity" required>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="projectDuration">Duration (months)</label>
+                    <input type="number" id="projectDuration" min="1" max="12" required>
+                </div>
+                <div class="form-group">
+                    <label>Required Skills</label>
+                    <div id="requiredSkills">
+                        <div class="skill-requirement">
+                            <select class="skill-select">
+                                <option value="javascript">JavaScript</option>
+                                <option value="react">React</option>
+                                <option value="node">Node.js</option>
+                            </select>
+                            <button type="button" class="btn-danger remove-skill">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-secondary" id="addSkillRequirement">
+                        <i class="fas fa-plus"></i>
+                        Add Skill Requirement
+                    </button>
+                </div>
+                <button type="submit" class="btn-primary">Create Project</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html> 

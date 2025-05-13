@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Builder - Skill Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h2>Skill Manager</h2>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="skills.html">
+                    <i class="fas fa-code"></i>
+                    <span>Skills</span>
+                </a>
+            </li>
+            <li>
+                <a href="projects.html">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="team.html">
+                    <i class="fas fa-users"></i>
+                    <span>Team Builder</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search team members...">
+            </div>
+            <div class="user-profile">
+                <img src="images/avatar.png" alt="User Avatar">
+                <span>John Doe</span>
+            </div>
+        </header>
+
+        <div class="team-page">
+            <div class="page-header">
+                <h1>Team Builder</h1>
+                <button class="btn-primary" id="createTeamBtn">
+                    <i class="fas fa-plus"></i>
+                    Create New Team
+                </button>
+            </div>
+
+            <!-- Project Selection -->
+            <div class="project-selection">
+                <div class="form-group">
+                    <label for="projectSelect">Select Project</label>
+                    <select id="projectSelect" class="form-control">
+                        <option value="">Choose a project...</option>
+                        <option value="ecommerce">E-commerce Platform</option>
+                        <option value="taskmanager">Task Management App</option>
+                        <option value="weather">Weather Dashboard</option>
+                    </select>
+                </div>
+                <button class="btn-primary" id="generateTeamBtn">
+                    <i class="fas fa-magic"></i>
+                    Generate Team
+                </button>
+            </div>
+
+            <!-- Team Suggestions -->
+            <div class="team-suggestions">
+                <h2>Suggested Team</h2>
+                <div class="team-grid">
+                    <!-- Team Member 1 -->
+                    <div class="team-member-card">
+                        <div class="member-header">
+                            <img src="images/avatar1.png" alt="Team Member">
+                            <div class="member-info">
+                                <h3>Sarah Johnson</h3>
+                                <p>Full Stack Developer</p>
+                            </div>
+                        </div>
+                        <div class="member-skills">
+                            <h4>Key Skills</h4>
+                            <div class="skill-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="skill-match">
+                            <div class="match-info">
+                                <span>Skill Match</span>
+                                <span class="match-percentage">95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="member-actions">
+                            <button class="btn-secondary">
+                                <i class="fas fa-user-plus"></i>
+                                Add to Team
+                            </button>
+                            <button class="btn-secondary">
+                                <i class="fas fa-info-circle"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="team-member-card">
+                        <div class="member-header">
+                            <img src="images/avatar2.png" alt="Team Member">
+                            <div class="member-info">
+                                <h3>Mike Chen</h3>
+                                <p>Backend Developer</p>
+                            </div>
+                        </div>
+                        <div class="member-skills">
+                            <h4>Key Skills</h4>
+                            <div class="skill-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Express</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="skill-match">
+                            <div class="match-info">
+                                <span>Skill Match</span>
+                                <span class="match-percentage">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="member-actions">
+                            <button class="btn-secondary">
+                                <i class="fas fa-user-plus"></i>
+                                Add to Team
+                            </button>
+                            <button class="btn-secondary">
+                                <i class="fas fa-info-circle"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="team-member-card">
+                        <div class="member-header">
+                            <img src="images/avatar3.png" alt="Team Member">
+                            <div class="member-info">
+                                <h3>Emily Davis</h3>
+                                <p>Frontend Developer</p>
+                            </div>
+                        </div>
+                        <div class="member-skills">
+                            <h4>Key Skills</h4>
+                            <div class="skill-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="skill-match">
+                            <div class="match-info">
+                                <span>Skill Match</span>
+                                <span class="match-percentage">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="member-actions">
+                            <button class="btn-secondary">
+                                <i class="fas fa-user-plus"></i>
+                                Add to Team
+                            </button>
+                            <button class="btn-secondary">
+                                <i class="fas fa-info-circle"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selected Team -->
+            <div class="selected-team">
+                <h2>Selected Team Members</h2>
+                <div class="selected-members">
+                    <!-- Selected members will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Create Team Modal -->
+    <div class="modal" id="createTeamModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create New Team</h2>
+            <form id="createTeamForm">
+                <div class="form-group">
+                    <label for="teamName">Team Name</label>
+                    <input type="text" id="teamName" required>
+                </div>
+                <div class="form-group">
+                    <label for="teamDescription">Description</label>
+                    <textarea id="teamDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="teamSize">Team Size</label>
+                    <input type="number" id="teamSize" min="1" max="10" required>
+                </div>
+                <button type="submit" class="btn-primary">Create Team</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/team.js"></script>
+</body>
+</html> 

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop - Orders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <i class="fas fa-flower"></i> Flower Shop
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="flowers.html" class="nav-link">Flowers</a>
+                <a href="orders.html" class="nav-link active">Orders</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Order Management</h1>
+            <p>View and manage your orders</p>
+        </div>
+
+        <div class="order-filters">
+            <div class="search-box">
+                <input type="text" placeholder="Search orders..." class="form-control">
+                <button class="btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filter-options">
+                <select class="form-control">
+                    <option value="">All Status</option>
+                    <option value="pending">Pending</option>
+                    <option value="processing">Processing</option>
+                    <option value="shipped">Shipped</option>
+                    <option value="delivered">Delivered</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+                <select class="form-control">
+                    <option value="">Date Range</option>
+                    <option value="today">Today</option>
+                    <option value="week">This Week</option>
+                    <option value="month">This Month</option>
+                    <option value="year">This Year</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="order-stats">
+            <div class="card stat-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Total Orders</h3>
+                <p class="stat-number">156</p>
+            </div>
+            <div class="card stat-card">
+                <i class="fas fa-clock"></i>
+                <h3>Pending</h3>
+                <p class="stat-number">23</p>
+            </div>
+            <div class="card stat-card">
+                <i class="fas fa-truck"></i>
+                <h3>Processing</h3>
+                <p class="stat-number">45</p>
+            </div>
+            <div class="card stat-card">
+                <i class="fas fa-check-circle"></i>
+                <h3>Delivered</h3>
+                <p class="stat-number">88</p>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Items</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#ORD-001</td>
+                        <td>
+                            <div class="customer-info">
+                                <img src="images/customer1.jpg" alt="Customer" class="customer-avatar">
+                                <div>
+                                    <p class="customer-name">John Doe</p>
+                                    <p class="customer-email">john@example.com</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>2024-03-15</td>
+                        <td>
+                            <div class="order-items">
+                                <span class="item">Red Rose (x2)</span>
+                                <span class="item">White Lily (x1)</span>
+                            </div>
+                        </td>
+                        <td>$89.97</td>
+                        <td>
+                            <span class="status-badge processing">Processing</span>
+                        </td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-icon" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn-icon" title="Edit Order">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-icon" title="Delete Order">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-002</td>
+                        <td>
+                            <div class="customer-info">
+                                <img src="images/customer2.jpg" alt="Customer" class="customer-avatar">
+                                <div>
+                                    <p class="customer-name">Jane Smith</p>
+                                    <p class="customer-email">jane@example.com</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>2024-03-14</td>
+                        <td>
+                            <div class="order-items">
+                                <span class="item">Pink Tulip (x3)</span>
+                            </div>
+                        </td>
+                        <td>$74.97</td>
+                        <td>
+                            <span class="status-badge delivered">Delivered</span>
+                        </td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-icon" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn-icon" title="Edit Order">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-icon" title="Delete Order">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button class="btn btn-secondary"><i class="fas fa-chevron-left"></i></button>
+            <button class="btn active">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn btn-secondary"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Order Details Modal -->
+    <div class="modal" id="orderDetailsModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Order Details</h2>
+                <span class="status-badge processing">Processing</span>
+            </div>
+            <div class="modal-body">
+                <div class="order-info">
+                    <div class="info-section">
+                        <h3>Customer Information</h3>
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Email:</strong> john@example.com</p>
+                        <p><strong>Phone:</strong> (555) 123-4567</p>
+                    </div>
+                    <div class="info-section">
+                        <h3>Shipping Address</h3>
+                        <p>123 Main Street</p>
+                        <p>Apt 4B</p>
+                        <p>New York, NY 10001</p>
+                    </div>
+                    <div class="info-section">
+                        <h3>Order Summary</h3>
+                        <div class="order-items-list">
+                            <div class="order-item">
+                                <span>Red Rose (x2)</span>
+                                <span>$59.98</span>
+                            </div>
+                            <div class="order-item">
+                                <span>White Lily (x1)</span>
+                                <span>$29.99</span>
+                            </div>
+                            <div class="order-total">
+                                <span>Total</span>
+                                <span>$89.97</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-timeline">
+                    <h3>Order Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Order Placed</h4>
+                                <p>March 15, 2024 - 10:30 AM</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Payment Confirmed</h4>
+                                <p>March 15, 2024 - 10:32 AM</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Processing</h4>
+                                <p>March 15, 2024 - 11:45 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary">Print Order</button>
+                <button class="btn">Update Status</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@flowershop.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Flower Street, City</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Flower Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

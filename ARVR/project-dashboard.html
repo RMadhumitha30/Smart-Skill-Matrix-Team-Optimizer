@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard - Skill Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h2>Skill Manager</h2>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="skills.html">
+                    <i class="fas fa-code"></i>
+                    <span>Skills</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="projects.html">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="team.html">
+                    <i class="fas fa-users"></i>
+                    <span>Team Builder</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search projects...">
+            </div>
+            <div class="user-profile">
+                <img src="images/avatar.png" alt="User Avatar">
+                <span>John Doe</span>
+            </div>
+        </header>
+
+        <div class="project-dashboard">
+            <div class="page-header">
+                <h1>Project Dashboard</h1>
+                <button class="btn-primary" id="addProjectBtn">
+                    <i class="fas fa-plus"></i>
+                    Add New Project
+                </button>
+            </div>
+
+            <!-- Project Summary Cards -->
+            <div class="summary-cards">
+                <div class="summary-card total">
+                    <div class="card-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Total Projects</h3>
+                        <p class="card-number">24</p>
+                        <p class="card-change positive">+3 this month</p>
+                    </div>
+                </div>
+                <div class="summary-card in-progress">
+                    <div class="card-icon">
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>In Progress</h3>
+                        <p class="card-number">12</p>
+                        <p class="card-change">Active</p>
+                    </div>
+                </div>
+                <div class="summary-card completed">
+                    <div class="card-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Completed</h3>
+                        <p class="card-number">8</p>
+                        <p class="card-change positive">+2 this week</p>
+                    </div>
+                </div>
+                <div class="summary-card pending">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Pending Approval</h3>
+                        <p class="card-number">4</p>
+                        <p class="card-change">Awaiting review</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Projects Table -->
+            <div class="recent-projects">
+                <h2>Recent Projects</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Project Name</th>
+                                <th>Status</th>
+                                <th>Technology</th>
+                                <th>Deadline</th>
+                                <th>Assigned To</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>E-commerce Platform</td>
+                                <td><span class="status-badge in-progress">In Progress</span></td>
+                                <td>React, Node.js</td>
+                                <td>Dec 15, 2024</td>
+                                <td>Sarah Johnson</td>
+                            </tr>
+                            <tr>
+                                <td>Task Management App</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td>Vue.js, Express</td>
+                                <td>Nov 30, 2024</td>
+                                <td>Mike Chen</td>
+                            </tr>
+                            <tr>
+                                <td>Weather Dashboard</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>React, API</td>
+                                <td>Jan 15, 2025</td>
+                                <td>Emily Davis</td>
+                            </tr>
+                            <tr>
+                                <td>Inventory System</td>
+                                <td><span class="status-badge in-progress">In Progress</span></td>
+                                <td>Spring, Java</td>
+                                <td>Feb 1, 2025</td>
+                                <td>Alex Thompson</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Technology Usage Chart -->
+            <div class="tech-usage">
+                <h2>Technology Usage in Projects</h2>
+                <div class="chart-container">
+                    <canvas id="techChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Project Modal -->
+    <div class="modal" id="addProjectModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Project</h2>
+            <form id="addProjectForm">
+                <div class="form-group">
+                    <label for="projectName">Project Name</label>
+                    <input type="text" id="projectName" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">Description</label>
+                    <textarea id="projectDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="projectTechnology">Technology Stack</label>
+                    <select id="projectTechnology" multiple required>
+                        <option value="react">React</option>
+                        <option value="vue">Vue.js</option>
+                        <option value="angular">Angular</option>
+                        <option value="node">Node.js</option>
+                        <option value="spring">Spring</option>
+                        <option value="java">Java</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="projectDeadline">Deadline</label>
+                    <input type="date" id="projectDeadline" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectAssignee">Assign To</label>
+                    <select id="projectAssignee" required>
+                        <option value="">Select team member...</option>
+                        <option value="sarah">Sarah Johnson</option>
+                        <option value="mike">Mike Chen</option>
+                        <option value="emily">Emily Davis</option>
+                        <option value="alex">Alex Thompson</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Create Project</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/project-dashboard.js"></script>
+</body>
+</html> 
